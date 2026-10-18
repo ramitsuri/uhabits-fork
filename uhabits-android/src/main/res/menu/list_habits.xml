@@ -85,6 +85,12 @@
         </item>
 
         <item
+            android:id="@+id/actionAllHabits"
+            android:orderInCategory="40"
+            android:title="@string/all_habits"
+            app:showAsAction="never"/>
+
+        <item
             android:id="@+id/actionToggleNightMode"
             android:checkable="true"
             android:enabled="true"

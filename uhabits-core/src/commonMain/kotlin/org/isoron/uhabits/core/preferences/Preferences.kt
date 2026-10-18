@@ -218,6 +218,23 @@ open class Preferences(private val storage: Storage) {
             for (l in listeners) l.onQuestionMarksChanged()
         }
 
+    open fun isHabitVisibleInAllHabits(habitId: Long): Boolean {
+        val hiddenIds = storage.getLongArray("pref_all_habits_hidden_habits", longArrayOf())
+        return !hiddenIds.contains(habitId)
+    }
+
+    open fun setHabitVisibleInAllHabits(habitId: Long, visible: Boolean) {
+        val hiddenIds = storage.getLongArray("pref_all_habits_hidden_habits", longArrayOf()).toMutableList()
+        if (visible) {
+            hiddenIds.remove(habitId)
+        } else {
+            if (!hiddenIds.contains(habitId)) {
+                hiddenIds.add(habitId)
+            }
+        }
+        storage.putLongArray("pref_all_habits_hidden_habits", hiddenIds.toLongArray())
+    }
+
     /**
      * @return An integer representing the first day of the week. Sunday
      * corresponds to 1, Monday to 2, and so on, until Saturday, which is

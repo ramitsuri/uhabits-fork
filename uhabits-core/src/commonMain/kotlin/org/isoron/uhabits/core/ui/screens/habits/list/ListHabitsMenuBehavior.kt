@@ -48,6 +48,10 @@ class ListHabitsMenuBehavior(
         screen.showAboutScreen()
     }
 
+    fun onViewAllHabits() {
+        screen.showAllHabitsScreen()
+    }
+
     fun onViewSettings() {
         screen.showSettingsScreen()
     }
@@ -140,6 +144,7 @@ class ListHabitsMenuBehavior(
     interface Screen {
         fun applyTheme()
         fun showAboutScreen()
+        fun showAllHabitsScreen()
         fun showFAQScreen()
         fun showSettingsScreen()
         fun showSelectHabitTypeDialog()

@@ -186,6 +186,8 @@
     <string name="long_press_to_edit">Press-and-hold to change the value</string>
     <string name="value">Value</string>
     <string name="calendar">Calendar</string>
+    <string name="all_habits">All Habits</string>
+    <string name="habits">Habits</string>
     <string name="unit">Unit</string>
     <string name="target_type">Target Type</string>
     <string name="target_type_at_least">At least</string>

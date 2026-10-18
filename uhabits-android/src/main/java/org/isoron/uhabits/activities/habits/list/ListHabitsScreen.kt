@@ -167,6 +167,11 @@ class ListHabitsScreen(
         activity.startActivity(intent)
     }
 
+    override fun showAllHabitsScreen() {
+        val intent = intentFactory.startAllHabitsActivity(activity)
+        activity.startActivity(intent)
+    }
+
     override fun showSelectHabitTypeDialog() {
         val dialog = HabitTypeDialog()
         dialog.show(activity.supportFragmentManager, "habitType")

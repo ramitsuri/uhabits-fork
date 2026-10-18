@@ -25,6 +25,7 @@ import android.net.Uri
 import me.tatarka.inject.annotations.Inject
 import org.isoron.uhabits.R
 import org.isoron.uhabits.activities.about.AboutActivity
+import org.isoron.uhabits.activities.habits.allhabits.AllHabitsActivity
 import org.isoron.uhabits.activities.habits.edit.EditHabitActivity
 import org.isoron.uhabits.activities.habits.show.ShowHabitActivity
 import org.isoron.uhabits.activities.intro.IntroActivity
@@ -53,6 +54,9 @@ class IntentFactory() {
 
     fun startAboutActivity(context: Context) =
         Intent(context, AboutActivity::class.java)
+
+    fun startAllHabitsActivity(context: Context) =
+        Intent(context, AllHabitsActivity::class.java)
 
     fun startIntroActivity(context: Context) =
         Intent(context, IntroActivity::class.java)

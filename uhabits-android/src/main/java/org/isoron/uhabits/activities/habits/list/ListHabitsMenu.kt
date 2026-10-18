@@ -123,6 +123,11 @@ class ListHabitsMenu(
                 return true
             }
 
+            R.id.actionAllHabits -> {
+                behavior.onViewAllHabits()
+                return true
+            }
+
             R.id.actionCreateHabit -> {
                 behavior.onCreateHabit()
                 return true
