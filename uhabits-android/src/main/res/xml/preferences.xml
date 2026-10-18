@@ -183,8 +183,7 @@
                 app:iconSpaceReserved="false">
             <intent
                     android:action="android.intent.action.VIEW"
-                    android:targetClass="org.isoron.uhabits.activities.about.AboutActivity"
-                    android:targetPackage="org.isoron.uhabits" />
+                    android:targetClass="org.isoron.uhabits.activities.about.AboutActivity" />
         </Preference>
 
     </PreferenceCategory>

@@ -74,6 +74,7 @@ android {
 
     buildTypes {
         release {
+            applicationIdSuffix = ".fork"
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.txt")
             if (signingConfigs.findByName("release") != null) {
