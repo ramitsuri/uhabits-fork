@@ -51,8 +51,10 @@ android {
     }
 
     defaultConfig {
-        versionCode = 20302
-        versionName = "2.3.2"
+        val appVer = libs.versions.appVersion.get()
+        val parts = appVer.split(".")
+        versionCode = parts[0].toInt() * 10000 + parts[1].toInt() * 100 + parts[2].toInt()
+        versionName = appVer
         minSdk = 28
         targetSdk = 36
         applicationId = "org.isoron.uhabits"
